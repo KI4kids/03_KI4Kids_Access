@@ -224,9 +224,9 @@ mkdir camtest
 cd camtest
 ```
 
+Python
 
-
-```
+```Python
 # camtest.py
 # Video mit der USB-Kamera
 
@@ -313,7 +313,8 @@ sudo apt-get install python-rpi.gpio
 
 
 ###  RPi.GPIO Beispiel in Thonny ausführen
-```
+
+```Python
 # GPIO-Bibliothek laden
 import RPi.GPIO as GPIO
 
@@ -393,7 +394,7 @@ sudo apt install python3-gpiozero
 
 ### gpiozero-Test in Thonny ausführen
 
-```
+```Python
 # LED 17 ein und nach 1 Sek aus
 # Bibliotheken laden
 from gpiozero import LED
@@ -414,7 +415,7 @@ led.off()
 
 ### Das Blinken soll nur 10 mal ausgeführt werden
 
-```
+```Python
 # Blink 10 mal
 from gpiozero import LED
 from time import sleep
@@ -432,7 +433,7 @@ for i in range(10):
 
 ### Erweitere das LED-Blink-Programm mit einer Endlosschleife
 
-```
+```Python
 #Endlosschleife
 from gpiozero import LED
 from time import sleep
@@ -452,7 +453,7 @@ while True:
 
 ### Das Programm kann mit CTRL+C abgebrochen werden
 
-```
+```Python
 # Abbruch mit CTRL+C
 from gpiozero import LED
 from time import sleep
@@ -474,7 +475,7 @@ except KeyboardInterrupt:
 
 ### led.blink() 
 
-```
+```Python
 # blink.py
 # Bibliotheken laden
 from gpiozero import LED
@@ -487,8 +488,7 @@ led.blink()
 ```
 ### led.blink() mit Abbruch
 
-```
-
+```Python
 from gpiozero import LED
 from time import sleep
 
@@ -504,13 +504,11 @@ except KeyboardInterrupt:
 finally:
     led.off()     # LED ausschalten
     print("LED ausgeschaltet")
-
-
 ```
 
 ### led.pulse()
 
-```
+```Python
 #puls.py
 # Bibliotheken laden
 from gpiozero import PWMLED
@@ -526,7 +524,7 @@ led.pulse()
 ### LED mit der Tastaur ein/aus schalten
 
 
-```
+```Python
 # LED mit der Tastaur ein/aus schalten
 
 import RPi.GPIO as GPIO
@@ -558,14 +556,13 @@ def controlLED():
 
 setupGPIO()
 controlLED()
-
 ```
 
 
 
 ### Programmiere ein Lauflicht
 
-```
+```Python
 #Lauflicht
 #dimme LED
 
@@ -588,15 +585,11 @@ def pulse_wave(led, delay=0.01):
 while True:
     for led in leds:
         pulse_wave(led)
-
-
-
 ```
 
 ### Programmiere ein Lauflicht vor-zurück
 
-```
-
+```Python
 # Lauflicht-Effekt mit 3 LEDs (Knight Rider Style)
 from gpiozero import LED
 from time import sleep
@@ -617,12 +610,11 @@ while True:
         led.on()
         sleep(0.2)
         led.off()
-
 ```
 
 ### Tastertest
 
-```
+```Python
 # Taster Test
 # Bibliotheken laden
 
@@ -640,7 +632,7 @@ print("Taster wurde gedrückt")
 
 ### Taster schaltet LED
 
-```
+```Python
 #Wenn Tester 14-> GND = LED 17 on
 # Bibliotheken laden
 from gpiozero import Button, LED
@@ -658,7 +650,8 @@ button.when_released = led.off
 ```
 
 ### Ampelprogramm
-```
+
+```Python
 #Ampel
 from gpiozero import TrafficLights
 from time import sleep
@@ -682,7 +675,7 @@ while True:
 
 ### Servo Testprogramm 1
 
-```
+```Python
 #servotest.py
 # Servo rot 5V!
 # Servo braun GND
@@ -727,7 +720,7 @@ while True:
 
 ### Servo Testprogramm 2
 
-```
+```Python
 #servo90.py
 
 import RPi.GPIO as GPIO
@@ -748,9 +741,10 @@ while True:
     p.ChangeDutyCycle(2.5) #Türe zu
     time.sleep(2)
 ```
+
 ### LED schalten im Browser
 
-```
+```Python
 # LED schalten im Browser
 # sudo apt-get install python3-flask
 
@@ -801,7 +795,6 @@ app.run(host="0.0.0.0")
 # http://192.168.1.110:5000/
 # http://192.168.1.110:5000/push-button
 # http://192.168.1.110:5000/led/17/state/1
-
 ```
 
 
@@ -828,7 +821,7 @@ Dazu laden wir und die benötigten Daten.
 
 Python
 
-```
+```Python
 #dlface.py
 
 import os
@@ -877,7 +870,9 @@ os.chdir(os.path.expanduser("~"))
 
 ### Download Bilder
 
-```
+Python
+
+```Python
 #dlpic.py
 
 import os
@@ -928,9 +923,9 @@ Im Verzeichnis "face" müssen wir neben den 3 Python-Skripten, die wir für unse
 Als Nächstes erstellen wir die Daten mit make.py. Die Bilder werden im Unterverzeichnis "dataset" gespeichert.
 
 
-Thonny
+Python
 
-```
+```Python
 # make.py
 
 import cv2
@@ -979,9 +974,9 @@ In dieser Phase müssen wir alle Benutzerdaten aus unserem Datensatz nehmen und 
 
 Erstellen wir das Trainerprogramm.
 
-Thonny
+Python
 
-```
+```Python
 # trainer.py
 
 import cv2
@@ -1033,9 +1028,9 @@ Dadurch wird eine Datei mit dem Namen "trainer.yml" in dem Trainerverzeichnis ge
 
 Nun haben wir die letzte Phase unseres Projekts erreicht. Hier fangen wir ein frisches Gesicht mit unserer Kamera ein, und wenn diese Person ihr Gesicht zuvor erfasst und trainiert hat, macht unser Recognizer eine "Vorhersage", die seine ID und einen Index zurückgibt, der zeigt, wie sicher der Recognizer mit dieser Übereinstimmung ist.
 
-Thonny
+Python
 
-```
+```Python
 # detect.py
 
 import cv2
@@ -1114,10 +1109,9 @@ cv2.destroyAllWindows()
 Wenn der Ausgang der Zutrittskontrolle beschalten ist, wenden wir uns der Programmierung zu.
 Mit dem Programm zutritt.py wird bei positiver Gesichtserkennung der GPIO27 für 3s aktiviert. Mit diesem Ausgang könnten wir ein Relais für einen Türöffner schalten.
 
-Thonny
+Python
 
-
-```
+```Python
 # zutritt.py
 
 import cv2
@@ -1206,7 +1200,9 @@ cv2.destroyAllWindows()
 
 ## Zutrittskontrolle mit einem Servo-Motor
 
-```
+Python
+
+```Python
 # zutrittservo.py
 # Servo rot 5V!
 # Servo braun GND
@@ -1395,12 +1391,7 @@ cam.release()
 cv2.destroyAllWindows()
 p.stop()
 GPIO.cleanup()
-
 ```
-
-
-
-
 
 ---
 
