@@ -1301,8 +1301,9 @@ print("\n [INFO] Beende das Programm")
 cam.release()
 cv2.destroyAllWindows()
 ```
+Python
 
-```
+```Python
 # zutrittservo2.py
 
 import cv2
