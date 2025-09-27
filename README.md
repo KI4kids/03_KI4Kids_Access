@@ -1107,7 +1107,7 @@ cv2.destroyAllWindows()
 ### Programmierung
 
 Wenn der Ausgang der Zutrittskontrolle beschalten ist, wenden wir uns der Programmierung zu.
-Mit dem Programm zutritt.py wird bei positiver Gesichtserkennung der GPIO27 für 3s aktiviert. Mit diesem Ausgang könnten wir ein Relais für einen Türöffner schalten.
+Mit dem Programm zutritt.py wird bei positiver Gesichtserkennung der GPIO27 für 2s aktiviert. Mit diesem Ausgang könnten wir ein Relais für einen Türöffner schalten.
 
 Python
 
