@@ -966,7 +966,7 @@ Für einen Benutzer mit einem face_id = 1 sieht die 4. Beispieldatei im Verzeich
 
 User.1.4.jpg
 
-Im Code gibt es eine count-Variable die die aufgenommenen Bilder zählt. Sie ist auf 30 eingestellt, je mehr BIlder wir erfassen, desto genauer funktioniert das System.
+Im Code gibt es eine count-Variable die die aufgenommenen Bilder zählt. Sie ist auf 100 eingestellt, je mehr BIlder wir erfassen, desto genauer funktioniert das System.
 
 ### System Training
 
