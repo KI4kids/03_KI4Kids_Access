@@ -37,17 +37,15 @@ GPIOs mit Python steuern und eine Zugangskontrolle mit Gesichtserkennung realisi
 ## Ablauf
 
 - Inbetriebnahme des Raspberry Pi
-- Virtual Environments mit Anaconda  
-- Aufgaben der KI Modelle  
+- Virtual Environments mit Anaconda
+- Aufgaben der KI Modelle
 - Installation der KI Modelle
-- GPIO Pakete installieren
-- GPIO testen
-- KI Pakete installieren (kein Anaconda)
-- Bilder für die Zutrittskontrolle erstellen
-- KI trainieren
-- Gesichtserkennung testen
-- Programm für die Zutrittskontrolle erstellen
+- Eine Gesichtserkennung programmieren
+- Die KI trainieren
+- Die Gesichtserkennung testen
+- Das Programm für die Zutrittskontrolle erstellen
 - Programmtest -und Optimierung
+
 
 ## Linux Standard Base - Versionsabfrage
 bash
@@ -993,7 +991,6 @@ recognizer = cv2.face.LBPHFaceRecognizer_create()
 time.sleep(0.1)
 detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml");
 
-# function to get the images and label data
 def getImagesAndLabels(path):
     imagePaths = [os.path.join(path,f) for f in os.listdir(path)]
     faceSamples=[]
@@ -1049,7 +1046,6 @@ faceCascade = cv2.CascadeClassifier(cascadePath);
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 
-#iniciate id counter
 id = 0
 
 # Die Namen eingeben ==> Lee: id=1,  etc
@@ -1133,7 +1129,6 @@ faceCascade = cv2.CascadeClassifier(cascadePath);
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 
-#iniciate id counter
 id = 0
 
 # Die Namen eingeben ==> Lee: id=1,  etc
