@@ -1136,8 +1136,8 @@ names = ['None', 'Lee', 'Beate', 'Tom']
 
 # Initialisiere und starte die Echtzeit-Videoaufnahme
 cam = cv2.VideoCapture(0)
-cam.set(3, 640) # set video widht
-cam.set(4, 480) # set video height
+cam.set(3, 640) # Breite
+cam.set(4, 480) # Höhe
 
 # Definiere die minimale Fenstergröße, die als Fläche erkannt werden soll
 minW = 0.1*cam.get(3)
@@ -1213,8 +1213,8 @@ myGPIO = 17
 
 # Korrekturfaktor für den Servo
 myCorrection = 0.35 #0.45
-maxPW = (2.0 + myCorrection) / 1000  # Maximum pulse width
-minPW = (1.0 - myCorrection) / 1000  # Minimum pulse width
+maxPW = (2.0 + myCorrection) / 1000  # Max
+minPW = (1.0 - myCorrection) / 1000  # Min
 
 # Initialisiere den Servo mit dem angepassten Pulsweitenbereich
 servo = Servo(myGPIO, min_pulse_width=minPW, max_pulse_width=maxPW)
