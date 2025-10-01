@@ -1089,7 +1089,7 @@ while True:
 
     cv2.imshow('camera',img)
 
-    k = cv2.waitKey(10) & 0xff # Press 'ESC' for exiting video
+    k = cv2.waitKey(10) & 0xff # 'ESC' beendet das video
     if k == 27:
         break
 
