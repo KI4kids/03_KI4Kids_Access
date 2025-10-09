@@ -57,9 +57,9 @@ lsb_release -a
 | | |
 |--|--|
 |Distributor ID: | Debian|
-|Description:|Debian GNU/Linux 12 (bookworm)|
-|Relaese:|12|
-|Codename:|bookworm|
+|Description:|Debian GNU/Linux 13 (trixie)|
+|Relaese:|13|
+|Codename:|trixie|
 | | |
 
 ---
