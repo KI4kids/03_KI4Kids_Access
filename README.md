@@ -156,7 +156,6 @@ conda remove -n access --all
 
 --->
 ---
----
 ## Modelle und Datensätze
 
 ### Modelle
@@ -187,7 +186,7 @@ OpenCV Standardpaket installieren
 ```
 sudo apt install python3-opencv
 ```
-
+<!---
 Zusätzliche OpenCV Funktionen installieren
 
 ```
@@ -199,6 +198,7 @@ Pillow Bibliothek installieren
 ```
 pip install pillow
 ```
+--->
 --- 
 
 ### USB-Kamera testen
