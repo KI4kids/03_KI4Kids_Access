@@ -37,7 +37,6 @@ GPIOs mit Python steuern und eine Zugangskontrolle mit Gesichtserkennung realisi
 ## Ablauf
 
 - Inbetriebnahme des Raspberry Pi
-- Virtual Environments mit Anaconda
 - Aufgaben der KI Modelle
 - Installation der KI Modelle
 - Eine Gesichtserkennung programmieren
@@ -64,6 +63,7 @@ lsb_release -a
 
 ---
 
+<!---
 ## Anaconda 
 
 Anaconda ist eine Python-Distribution für Datenverarbeitung von großen Mengen, vorhersagende Analyse und wissenschaftliche Berechnungen. Bestandteile des Anaconda Pakets sind NumPy, SciPy, matplotlib, pandas, IPython, Jupyter Notebook, scikit-learn und der Bibliothek Intel MKL.
@@ -153,6 +153,8 @@ conda env list
 ```
 conda remove -n access --all
 ```
+
+--->
 ---
 ---
 ## Modelle und Datensätze
@@ -179,26 +181,17 @@ Die Bibliothek wurde entwickelt, um Forschern und Entwicklern eine einfache und 
 So wurde OpenCV ein beliebtes und umfassende Model für Computervisionsaufgaben und bietet eine Vielzahl von Tools und Algorithmen für die Bild- und Videoverarbeitung, Objekterkennung und Gesichtserkennung.
 
 
-pip Installer
 
-pip install ist ein Befehl, der im Python-Paketmanager pip verwendet wird, um Python-Pakete aus dem Python Package Index (PyPI) oder anderen Quellen zu installieren. Im Wesentlichen ermöglicht er die Installation, Aktualisierung und Verwaltung von Python-Softwarepaketen.
-
-
-
-```
-conda install anaconda::pip
-
-```
 OpenCV Standardpaket installieren
 
 ```
-pip install opencv-python
+sudo apt install python3-opencv
 ```
 
 Zusätzliche OpenCV Funktionen installieren
 
 ```
-pip install opencv-contrib-python
+pip install opencv-python
 ```
 
 Pillow Bibliothek installieren
