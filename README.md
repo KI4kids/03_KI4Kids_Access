@@ -831,14 +831,14 @@ import zipfile
 os.chdir(os.path.expanduser("~"))
 
 # Erstelle den Ordner  face
-os.makedirs("face", exist_ok=True)
+os.makedirs("facepic", exist_ok=True)
 
 # Wechsle in das Home-Verzeichnis 
 os.chdir(os.path.expanduser("~"))
 
 
 # Wechsle in den Ordner
-os.chdir("face")
+os.chdir("facepic")
 
 # Hilfsfunktion zum Herunterladen von Dateien
 def download_file(url, filename=None):
@@ -858,7 +858,7 @@ download_file("https://frankyhub.de/KI_face/face.zip")
 unzip_and_remove("face.zip")
 
 # Zeige den Inhalt des aktuellen Verzeichnisses
-print("Inhalt von face:")
+print("Inhalt von facepic:")
 print(os.listdir("."))
 
 # Wechsle in das Home-Verzeichnis 
