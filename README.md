@@ -558,7 +558,7 @@ controlLED()
 
 
 
-### Programmiere ein Lauflicht mit kontrrollierten Abbruch
+### Programmiere ein Lauflicht mit Strg-C Abbruch und LED aus
 
 ```Python
 #Lauflicht
