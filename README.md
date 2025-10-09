@@ -558,7 +558,7 @@ controlLED()
 
 
 
-### Programmiere ein Lauflicht
+### Programmiere ein Lauflicht mit kontrrollierten Abbruch
 
 ```Python
 #Lauflicht
@@ -579,10 +579,18 @@ def pulse_wave(led, delay=0.01):
     for brightness in range(100, -1, -5):  # Abblenden in 5er Schritten, die Werte von brightness sind: 100, 95, 90, 85, ..., 5, 0.
         led.value = brightness / 100       # led.value erwartet einen Wert zwischen 0.0 und 1.0
         sleep(delay)
+        
+try:        
 
-while True:
-    for led in leds:
-        pulse_wave(led)
+    while True:
+        for led in leds:
+            pulse_wave(led)
+except KeyboardInterrupt:
+    print("Beende Programm mit Ctrl+C …")
+finally:
+    led.off()     # LED ausschalten
+    print("LED ausgeschaltet")
+
 ```
 
 ### Programmiere ein Lauflicht vor-zurück
