@@ -557,6 +557,33 @@ controlLED()
 ```
 
 
+### Programmiere ein Lauflicht
+
+```Python
+#Lauflicht
+#dimme LED
+
+from gpiozero import PWMLED
+from time import sleep
+
+# LEDs mit PWM (dimmbare LEDs) definieren
+leds = [PWMLED(17), PWMLED(27), PWMLED(22)]
+
+# Zähler von 0-100 in 5er Schritten und von 100-0 in 5er Schritten
+def pulse_wave(led, delay=0.01):
+    # Pulsiert die LED von 0 bis 1 (hell) und zurück
+    for brightness in range(0, 101, 5):  # Aufblenden in 5er Schritten, die Werte von brightness sind: 0, 5, 10, 15, ..., 95, 100
+        led.value = brightness / 100     # led.value erwartet einen Wert zwischen 0.0 und 1.0
+        sleep(delay)
+    for brightness in range(100, -1, -5):  # Abblenden in 5er Schritten, die Werte von brightness sind: 100, 95, 90, 85, ..., 5, 0.
+        led.value = brightness / 100       # led.value erwartet einen Wert zwischen 0.0 und 1.0
+        sleep(delay)
+              
+
+while True:
+        for led in leds:
+            pulse_wave(led)
+```
 
 ### Programmiere ein Lauflicht mit Strg-C Abbruch und LED aus
 
