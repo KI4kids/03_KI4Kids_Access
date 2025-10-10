@@ -859,14 +859,14 @@ import zipfile
 os.chdir(os.path.expanduser("~"))
 
 # Erstelle den Ordner  face
-os.makedirs("facepic", exist_ok=True)
+os.makedirs("face", exist_ok=True)
 
 # Wechsle in das Home-Verzeichnis 
 os.chdir(os.path.expanduser("~"))
 
 
 # Wechsle in den Ordner
-os.chdir("facepic")
+os.chdir("face")
 
 # Hilfsfunktion zum Herunterladen von Dateien
 def download_file(url, filename=None):
@@ -886,7 +886,7 @@ download_file("https://frankyhub.de/KI_face/face.zip")
 unzip_and_remove("face.zip")
 
 # Zeige den Inhalt des aktuellen Verzeichnisses
-print("Inhalt von facepic:")
+print("Inhalt von face:")
 print(os.listdir("."))
 
 # Wechsle in das Home-Verzeichnis 
@@ -1237,7 +1237,7 @@ import os
 from gpiozero import Servo
 from time import sleep
 
-myGPIO = 17
+myGPIO = 14
 
 # Korrekturfaktor für den Servo
 myCorrection = 0.35 #0.45
@@ -1336,7 +1336,7 @@ import RPi.GPIO as GPIO
 import time
 
 
-servoPIN = 17
+servoPIN = 14
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(servoPIN, GPIO.OUT)
 
