@@ -1298,12 +1298,12 @@ while True:
 
            # Bewege den Servo in die Mittelposition
             servo.mid()
-            print("mid")
+            print("Tuere offen")
             sleep(0.5)
 
            # Bewege den Servo in die maximale Position
             servo.max()
-            print("max")
+            print("Tuere geschlossen")
             sleep(1)
 
         else:
