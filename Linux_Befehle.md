@@ -59,8 +59,11 @@
 |pip3 install gpiozero --break-system-packages|gpiozero installieren |
 |env neu starten| |
 |sudo python ll.py| |
+|sudo apt install -y python3-opencv|install opencv|
+|sudo python zutrtt.py| starte zutritt|
 |---|---|
 |---|---|
+
 
 
 
