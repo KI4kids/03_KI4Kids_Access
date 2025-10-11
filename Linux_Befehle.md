@@ -57,8 +57,11 @@
 |sudo apt install python3-pigpio| pigpio installieren |
 |sudo apt install python3-rpi.gpio| rpi.gpio installieren |
 |pip3 install gpiozero --break-system-packages|gpiozero installieren |
+|env neu starten| |
+|sudo python ll.py| |
 |---|---|
 |---|---|
+
 
 
 
