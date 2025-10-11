@@ -52,6 +52,12 @@
 |conda env create -f myenv.yml  | Anaconda env importieren |
 |conda rename -n old_name new_name  | Anaconda env umbenennen |
 |---|---|
+|sudo apt update && apt install -y python3-pip|pip installieren |
+|sudo apt install python3-lgpio| lgpio installieren|
+|sudo apt install python3-pigpio| pigpio installieren |
+|sudo apt install python3-rpi.gpio| rpi.gpio installieren |
+|pip3 install gpiozero --break-system-packages|gpiozero installieren |
+|---|---|
 |---|---|
 
 
