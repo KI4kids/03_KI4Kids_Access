@@ -155,102 +155,8 @@ conda remove -n access --all
 ```
 
 --->
----
-## Modelle und Datensätze
-
-### Modelle
-- yolo von Ultralytics
-- OpenCV von Intel
-- Pytorch  wurde von Meta AI (ehemals Facebook AI Research Lab) entwickelt seit 2017 Open source
-- keras von google, jetzt Open source 
-- TensorFlow von google
-
-### Datensätze
-- coco von Ultralytics
-- kaggle von google 
-- aws von Amazon web Service
-- Open X-Embodiment Dataset und 
-- Open-Physical-Interaction Dataset Collection von NVIDIA
 
 
-### OpenCV 
-
-OpenCV (Open Source Computer Vision Library) wurde ursprünglich von Intel im Jahr 1999 initiiert und ist seitdem zu einer der beliebtesten Bibliotheken für Computer Vision geworden. 
-Die Bibliothek wurde entwickelt, um Forschern und Entwicklern eine einfache und effiziente Möglichkeit zu bieten, Computer Vision in Echtzeitanwendungen zu integrieren.
-So wurde OpenCV ein beliebtes und umfassende Model für Computervisionsaufgaben und bietet eine Vielzahl von Tools und Algorithmen für die Bild- und Videoverarbeitung, Objekterkennung und Gesichtserkennung.
-
-
-
-OpenCV Standardpaket installieren
-
-```
-sudo apt install python3-opencv
-```
-<!---
-Zusätzliche OpenCV Funktionen installieren
-
-```
-pip install opencv-python
-```
-
-Pillow Bibliothek installieren
-
-```
-pip install pillow
-```
---->
---- 
-
-### USB-Kamera testen
-
-Der Code erfasst den Videostream, der von der Kamera generiert wird, und zeigt sowohl im BGR-Farb- als auch im Graumodus an. Mit q wird er beendet.
-
-```
-cd
-```
-```
-mkdir camtest
-```
-```
-cd camtest
-```
-
-Python
-
-```Python
-# camtest.py
-# Video mit der USB-Kamera
-
-import numpy as np
-import cv2
-
-cap = cv2.VideoCapture(0)
-
-while(True):
-    # Bild für Bild erfassen
-    ret, frame = cap.read()
-
-    # Die Bilder im Frame
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-   
-    # Zeige den Frame an
-    cv2.imshow('frame',frame)  #In Farbe
-    #cv2.imshow('gray',gray)    #In SW
-
-    if cv2.waitKey(20) & 0xFF == ord('q'):
-        break
-
-# Programm beenden
-cap.release()
-cv2.destroyAllWindows()
-
-```
-
-```
-python camtest.py
-```
-
----
 ---
 
 
@@ -827,7 +733,102 @@ app.run(host="0.0.0.0")
 
 ---
 ---
+## Modelle und Datensätze
 
+### Modelle
+- yolo von Ultralytics
+- OpenCV von Intel
+- Pytorch  wurde von Meta AI (ehemals Facebook AI Research Lab) entwickelt seit 2017 Open source
+- keras von google, jetzt Open source 
+- TensorFlow von google
+
+### Datensätze
+- coco von Ultralytics
+- kaggle von google 
+- aws von Amazon web Service
+- Open X-Embodiment Dataset und 
+- Open-Physical-Interaction Dataset Collection von NVIDIA
+
+
+### OpenCV 
+
+OpenCV (Open Source Computer Vision Library) wurde ursprünglich von Intel im Jahr 1999 initiiert und ist seitdem zu einer der beliebtesten Bibliotheken für Computer Vision geworden. 
+Die Bibliothek wurde entwickelt, um Forschern und Entwicklern eine einfache und effiziente Möglichkeit zu bieten, Computer Vision in Echtzeitanwendungen zu integrieren.
+So wurde OpenCV ein beliebtes und umfassende Model für Computervisionsaufgaben und bietet eine Vielzahl von Tools und Algorithmen für die Bild- und Videoverarbeitung, Objekterkennung und Gesichtserkennung.
+
+
+
+OpenCV Standardpaket installieren
+
+```
+sudo apt install python3-opencv
+```
+<!---
+Zusätzliche OpenCV Funktionen installieren
+
+```
+pip install opencv-python
+```
+
+Pillow Bibliothek installieren
+
+```
+pip install pillow
+```
+--->
+--- 
+
+### USB-Kamera testen
+
+Der Code erfasst den Videostream, der von der Kamera generiert wird, und zeigt sowohl im BGR-Farb- als auch im Graumodus an. Mit q wird er beendet.
+
+```
+cd
+```
+```
+mkdir camtest
+```
+```
+cd camtest
+```
+
+Python
+
+```Python
+# camtest.py
+# Video mit der USB-Kamera
+
+import numpy as np
+import cv2
+
+cap = cv2.VideoCapture(0)
+
+while(True):
+    # Bild für Bild erfassen
+    ret, frame = cap.read()
+
+    # Die Bilder im Frame
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+   
+    # Zeige den Frame an
+    cv2.imshow('frame',frame)  #In Farbe
+    #cv2.imshow('gray',gray)    #In SW
+
+    if cv2.waitKey(20) & 0xFF == ord('q'):
+        break
+
+# Programm beenden
+cap.release()
+cv2.destroyAllWindows()
+
+```
+
+```
+python camtest.py
+```
+
+---
+---
 
 
 
